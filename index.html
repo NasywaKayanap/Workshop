@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortura Fashion Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Cortura</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Boys</a></li>
+                        <li><a href="#">Girls</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <a href="#">My Account</a>
+            <a href="#">Favorites</a>
+            <a href="#">Login</a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <aside class="sidebar">
+        <button class="close-sidebar">✖</button>
+        <div class="sidebar-menu">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Cardigans</a></li>
+                <li><a href="#">Coats</a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Footwear</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Make Your Fashion Smarter!</h1>
+            <p>Clothing made for you!</p>
+            <a href="#" class="cta-btn">Discover Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://w0.peakpx.com/wallpaper/739/894/HD-wallpaper-fashion-models-models-beautiful-girls-female-and-men-casual-clothes-fashion-beautiful-boys.jpg" alt="Fashion Image">
+        </div>
+    </section>
+
+    <!-- Seasons Section -->
+    <section class="seasons">
+        <h2>Explore Fashion by Seasons</h2>
+        <div class="seasons-grid">
+            <div class="season">
+                <img src="https://i.pinimg.com/564x/1a/bc/9d/1abc9ddac9597d5b892d3151d4d651ac.jpg" alt="Rainy Season">
+                <h3>Rainy</h3>
+                <p>Men | Women | Boys | Girls</p>
+            </div>
+            <div class="season">
+                <img src="https://i.pinimg.com/236x/5e/52/ab/5e52abafae9a43d5695d069d1e49fcba.jpg" alt="Dry Season">
+                <h3>Dry</h3>
+                <p>Men | Women | Boys | Girls</p>
+            </div>
+            <div class="season">
+                <img src="https://i.pinimg.com/474x/42/7a/a4/427aa4b3459f16be51e3f9ffead31211.jpg" alt="Hot Season">
+                <h3>Hot</h3>
+                <p>Men | Women | Boys | Girls</p>
+            </div>
+            <div class="season">
+                <img src="https://i.pinimg.com/236x/07/83/1b/07831bcc869b48371c1cd2fa2269f077.jpg" alt="Spring Season">
+                <h3>Spring</h3>
+                <p>Men | Women | Boys | Girls</p>
+            </div>
+            <div class="season">
+                <img src="https://i.pinimg.com/564x/f4/00/eb/f400eba2105e8c99c33dc616b3b785a0.jpg" alt="Snowy Season">
+                <h3>Snowy</h3>
+                <p>Men | Women | Boys | Girls</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Are Saying</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"I absolutely love the seasonal collections! Always on trend."</p>
+                <h4>- Jane Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Cortura makes it easy to find fashion for every occasion!"</p>
+                <h4>- John Smith</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h2>Ready to Upgrade Your Wardrobe?</h2>
+        <a href="#" class="cta-btn">Start Shopping</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <p>&copy; 2024 Cortura. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const closeSidebar = document.querySelector('.close-sidebar');
+
+            menuToggle.addEventListener('click', function () {
+                sidebar.classList.add('active');
+            });
+
+            closeSidebar.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

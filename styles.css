@@ -1,0 +1,344 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.search-container input {
+    padding: 10px 40px 10px 15px; /* Tambahkan padding untuk ruang ikon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px; /* Atur lebar input sesuai kebutuhan */
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 18px;
+    pointer-events: none; /* Agar klik tidak mengganggu input */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6c757d;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: #6c757d;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #e9ecef;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #6c757d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #495057;
+}
+
+/* Seasons Section */
+.seasons {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 60px; /* Tambahkan jarak di bawah */
+}
+
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.season {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.season:hover {
+    transform: translateY(-10px);
+}
+
+.season img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.season h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.season p {
+    color: #6c757d;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 40px;
+    background-color: #e9ecef;
+    text-align: center;
+    margin-bottom: 60px; /* Tambahkan jarak di bawah */
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.testimonial {
+    flex: 1;
+    padding: 20px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.testimonial h4 {
+    color: #6c757d;
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 60px 40px;
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 60px; /* Tambahkan jarak di bawah */
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #6c757d;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    padding: 60px 40px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto; /* Pastikan footer selalu berada di bagian bawah */
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #6c757d;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-menu {
+    padding: 20px;
+}
+
+.sidebar-menu h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.sidebar-menu ul li a:hover {
+    color: #6c757d;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close-sidebar:hover {
+    color: #6c757d;
+}
+
+/* JavaScript Styles */
+.menu-toggle {
+    display: block;
+}
+
+.menu-toggle.active + .sidebar {
+    transform: translateX(0);
+}
