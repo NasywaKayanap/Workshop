@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cortura Fashion Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /*about*/
+.about-section {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Styling untuk Timeline */
+.timeline {
+    margin-top: 40px;
+}
+
+.timeline h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.timeline ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Styling untuk Our Values dan Our Mission */
+.vision-mission,
+.values {
+    margin-top: 60px; /* Menambahkan jarak antara bagian */
+    text-align: left;  /* Merapikan teks ke kiri untuk tampilan yang lebih terstruktur */
+    padding: 0 20px; /* Menambahkan padding di dalam bagian */
+}
+
+.vision-mission h2,
+.values h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px; /* Disesuaikan untuk jarak yang lebih bersih */
+    border-bottom: 2px solid #ddd; /* Menambahkan garis di bawah heading */
+    padding-bottom: 10px;
+}
+
+.vision-mission p,
+.values p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6; /* Menambahkan spasi antar-baris untuk keterbacaan yang lebih baik */
+    margin-bottom: 20px;
+}
+
+.values ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.values ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Animasi Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Gerakan kecil ke bawah untuk efek masuk */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+/* Hover effect untuk gambar */
+.about-container img:hover {
+    transform: scale(1.05); /* Memperbesar gambar sedikit saat di-hover */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effect untuk heading */
+.about-container h1:hover,
+.timeline h2:hover {
+    color: #007BFF; /* Ubah warna teks saat di-hover */
+    transition: color 0.3s ease-in;
+}
+
+/* Additional hover animation untuk Our Values */
+.values ul li:hover {
+    transform: translateX(10px); /* Gerakan ke kanan saat di-hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling untuk dropdown menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative; /* Menetapkan posisi relatif untuk parent item */
+    display: inline-block; /* Menampilkan item secara horizontal */
+}
+
+nav ul li ul {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute; /* Posisi dropdown di bawah item induk */
+    top: 100%; /* Posisi dropdown tepat di bawah item induk */
+    left: 0;
+    background-color: #ffffff; /* Warna latar belakang dropdown */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: 1px solid #ddd; /* Border untuk dropdown */
+    z-index: 1000; /* Pastikan dropdown muncul di atas elemen lain */
+    width: auto; /* Atur lebar dropdown agar menyesuaikan dengan isi */
+    min-width: 50px; /* Setel lebar minimum agar cukup lebar */
+}
+
+nav ul li:hover ul {
+    display: block; /* Tampilkan dropdown saat item induk di-hover */
+}
+
+nav ul li ul li {
+    display: block; /* Pastikan item dropdown tampil dalam baris terpisah */
+}
+
+nav ul li ul li a {
+    display: block; /* Pastikan link dalam dropdown mengisi seluruh area */
+    padding: 10px 15px; /* Menambahkan padding horizontal dan vertikal */
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap; /* Mencegah teks membungkus baris */
+}
+
+nav ul li ul li a:hover {
+    background-color: #f4f4f4; /* Warna latar belakang saat hover */
+}
+
+/* Styling untuk menu toggle */
+.menu-toggle {
+    display: none; /* Sembunyikan toggle menu secara default */
+}
+
+nav.active {
+    display: block; /* Tampilkan menu saat toggle aktif */
+}
+
+/* Media query untuk menampilkan toggle menu pada perangkat kecil */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Sembunyikan menu pada perangkat kecil */
+    }
+
+    nav.active ul {
+        display: block; /* Tampilkan menu saat toggle aktif */
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan toggle menu pada perangkat kecil */
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Cortura</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="men.html"><i class="fas fa-male"></i> Men</a></li>
+                        <li><a href="women.html"><i class="fas fa-female"></i> Women</a></li>
+                        <li><a href="boys.html"><i class="fas fa-child"></i> Boys</a></li>
+                        <li><a href="girls.html"><i class="fas fa-child"></i> Girls</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search-container">
+            </div>
+            <a href="myacc.html">My Account</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section class="about-section fade-in">
+        <div class="about-container">
+            <h1>About Us</h1>
+            <p>Cortura is a leading fashion brand dedicated to providing not only trendy but also high-quality and sustainable clothing for all. We understand the importance of comfort and style, especially when the ever-changing weather impacts your daily outfit choices. With our expertise, we aim to make it easier for you to find clothing that suits every season. Whether it’s summer, rainy season, spring, or even winter, we offer collections that fit your every need.</p>
+
+            <p>We created this website to offer a practical solution for those who often struggle to find the right outfit for each season. Our goal is to help you feel more confident with stylish, modern fashion choices that are still comfortable in various weather conditions. Every item we offer is carefully designed, ensuring you can always look fashionable and be ready for any weather changes without sacrificing style.</p>
+
+            <img src="https://i.pinimg.com/564x/24/ae/51/24ae51a98e51e7c8c48b8268c536aa41.jpg" alt="About Us Image">
+        </div>
+
+        <div class="vision-mission">
+            <h2>Our Vision & Mission</h2>
+            <p><strong>Vision:</strong> To become a globally recognized fashion brand known for innovation in providing sustainable fashion solutions that blend beauty and function for all seasons.</p>
+            <p><strong>Mission:</strong> To create an enjoyable, easy, and eco-friendly shopping experience with high-quality apparel collections designed specifically for each season.</p>
+        </div>
+
+        <div class="values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Innovative Design:</strong> We constantly strive to create designs that follow the latest fashion trends and meet our customers' needs.</li>
+                <li><strong>Sustainability:</strong> Our commitment to the environment is reflected in our choice of eco-friendly materials and responsible production processes.</li>
+                <li><strong>Customer-Centric:</strong> We focus on our customers' needs and comfort, ensuring every collection we offer gives you the best experience.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cortura. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const closeSidebar = document.querySelector('.close-sidebar');
+
+            menuToggle.addEventListener('click', function () {
+                sidebar.classList.add('active');
+            });
+
+            closeSidebar.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        function checkVisibility() {
+            fadeInElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cortura Fashion Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /*contact*/
+        .contact-section {
+            padding: 60px 40px;
+            background-color: #f8f9fa;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        form {
+            width: 50%;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        form button:hover {
+            background-color: #495057;
+            transform: translateY(-5px); /* Tombol bergerak sedikit ke atas saat di-hover */
+        }
+
+        .map {
+            width: 40%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative; /* Menetapkan posisi relatif untuk parent item */
+            display: inline-block; /* Menampilkan item secara horizontal */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            border: 1px solid #ddd;
+            z-index: 1000;
+            width: auto;
+            min-width: 50px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Animasi link hover */
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #6c757d;
+            transform: scale(1.1); /* Membuat link membesar saat di-hover */
+        }
+
+        /* Menambahkan ikon untuk kategori */
+        nav ul li ul li a .fa-child {
+            color: #ffb3b3;
+        }
+
+        nav ul li ul li a .fa-male {
+            color: #007bff;
+        }
+
+        nav ul li ul li a .fa-female {
+            color: #ff69b4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Cortura</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="men.html"><i class="fas fa-male"></i> Men</a></li>
+                        <li><a href="women.html"><i class="fas fa-female"></i> Women</a></li>
+                        <li><a href="boys.html"><i class="fas fa-child"></i> Boys</a></li>
+                        <li><a href="girls.html"><i class="fas fa-child"></i> Girls</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search-container">
+            </div>
+            <a href="myacc.html">My Account</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether it's feedback, questions, or collaboration opportunities, feel free to reach out. Our team is ready to assist you with any inquiries you may have. Fill out the form below, and we'll get back to you as soon as possible!</p>
+        <div class="contact-container">
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=New+York&z=15&output=embed" width="100%" height="350"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cortura. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Cortura Fashion Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /*services*/
+/* Styling for Services Section */
+.services-section {
+    padding: 60px 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+    position: relative;
+}
+
+.services-section h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.service {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/* Animation on Scroll */
+.service {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative; /* Menetapkan posisi relatif untuk parent item */
+    display: inline-block; /* Menampilkan item secara horizontal */
+}
+
+nav ul li ul {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute; /* Posisi dropdown di bawah item induk */
+    top: 100%; /* Posisi dropdown tepat di bawah item induk */
+    left: 0;
+    background-color: #ffffff; /* Warna latar belakang dropdown */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: 1px solid #ddd; /* Border untuk dropdown */
+    z-index: 1000; /* Pastikan dropdown muncul di atas elemen lain */
+    width: auto; /* Atur lebar dropdown agar menyesuaikan dengan isi */
+    min-width: 50px; /* Setel lebar minimum agar cukup lebar */
+}
+
+nav ul li:hover ul {
+    display: block; /* Tampilkan dropdown saat item induk di-hover */
+}
+
+nav ul li ul li {
+    display: block; /* Pastikan item dropdown tampil dalam baris terpisah */
+}
+
+nav ul li ul li a {
+    display: block; /* Pastikan link dalam dropdown mengisi seluruh area */
+    padding: 10px 15px; /* Menambahkan padding horizontal dan vertikal */
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap; /* Mencegah teks membungkus baris */
+}
+
+nav ul li ul li a:hover {
+    background-color: #f4f4f4; /* Warna latar belakang saat hover */
+}
+
+
+/* Menambahkan ikon untuk kategori */
+nav ul li ul li a .fa-child {
+    color: #ffb3b3; /* Ikon anak perempuan */
+}
+
+nav ul li ul li a .fa-male {
+    color: #007bff; /* Ikon pria */
+}
+
+nav ul li ul li a .fa-female {
+    color: #ff69b4; /* Ikon wanita */
+}
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Cortura</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="men.html"><i class="fas fa-male"></i> Men</a></li>
+                        <li><a href="women.html"><i class="fas fa-female"></i> Women</a></li>
+                        <li><a href="boys.html"><i class="fas fa-child"></i> Boys</a></li>
+                        <li><a href="girls.html"><i class="fas fa-child"></i> Girls</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search-container">
+            </div>
+            <a href="myacc.html">My Account</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service">
+                <img src="https://i.pinimg.com/564x/13/33/7a/13337a7f567065ae28abeb2c7c46e3cb.jpg" alt="Custom Design Service">
+                <h2>Custom Design</h2>
+                <p>We offer custom clothing design services tailored to your preferences. Get your dream outfit crafted with precision.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/564x/03/c9/2e/03c92e815181e93bb0e23d4f82cd6fc4.jpg" alt="Personal Stylist Service">
+                <h2>Personal Stylist</h2>
+                <p>Book an appointment with our personal stylists to upgrade your wardrobe and achieve the perfect look for any occasion.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/564x/d3/f2/e6/d3f2e6e0fe792373a40b75bf52386361.jpg" alt="Seasonal Collections Service">
+                <h2>Seasonal Collections</h2>
+                <p>Explore our seasonal fashion collections designed by top designers, showcasing the best looks for every season.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cortura. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animation
+        const services = document.querySelectorAll('.service');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        services.forEach(service => {
+            observer.observe(service);
+        });
+    </script>
+</body>
+
+</html>
